@@ -4,7 +4,12 @@
     flex-direction: column;
     justify-content: center;
     min-height: 320px;
+    transition: transform 0.1s;
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+}
+
+.first-entry:hover {
+    transform: scale(1.025);
 }
 
 .first-entry .entry-header {
@@ -21,7 +26,7 @@
 
 .first-entry .entry-content {
     margin: 14px 0;
-    font-size: 16px;
+    font-size: 18px;
     -webkit-line-clamp: 3;
 }
 
@@ -39,12 +44,17 @@
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
-    transition: transform 0.1s;
+    transition: transform 0.1s, background-color 0.1s;
     border: 1px solid var(--border);
 }
 
 .post-entry:active {
     transform: scale(0.96);
+}
+
+.post-entry:hover {
+    transform: scale(1.025);
+    background-color: var(--entry-highlight);
 }
 
 .tag-entry .entry-cover {
